@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "bot.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "bot.py"
+    }
+  ],
+  "env": {
+    "DISCORD_BOT_TOKEN": "@discord_bot_token",
+    "API_BASE_URL": "@api_base_url"
+  }
+}
