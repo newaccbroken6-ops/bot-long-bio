@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import requests
-import audioop
+
 # Bot configuration - Direct token in code
 TOKEN = 'MTQ3MTA2OTUwMDA1NjI3MzA5MQ.GUxC9O.4MSuH4YvhIJiR3uh7eiFMBLne2zuvYQDkAV-BE'
 API_BASE_URL = 'https://long-bio-dusky.vercel.app/'  
