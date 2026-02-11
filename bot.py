@@ -1,10 +1,15 @@
 import discord
 from discord.ext import commands
 import requests
+from dotenv import load_dotenv
+import os
 
-# Bot configuration - Direct token in code
-TOKEN = 'MTQ3MTA2OTUwMDA1NjI3MzA5MQ.GUxC9O.4MSuH4YvhIJiR3uh7eiFMBLne2zuvYQDkAV-BE'
-API_BASE_URL = 'https://long-bio-dusky.vercel.app/'  
+# Load environment variables
+load_dotenv()
+
+# Bot configuration - Using environment variables
+TOKEN = os.getenv('DISCORD_BOT_TOKEN')
+API_BASE_URL = os.getenv('API_BASE_URL', 'https://long-bio-dusky.vercel.app/')  
 
 print(f"Configuration loaded:")
 print(f"- API Base URL: {API_BASE_URL}")
